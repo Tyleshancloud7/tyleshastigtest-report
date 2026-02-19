@@ -1,285 +1,93 @@
 cd ~/tyleshastigtest-report
 
-nano ~/Desktop/ultra-viral-README.md
-
-nano ~/Desktop/ultra-viral-README.md
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 cat > README.md << 'EOF'
-# 🥷🏽💎 STIG Lab Vulnerability Hunt – GitHub Hero Edition
-## “Notepad Tried to Become a Hacker” 💻💥
+🥷🏽💎 STIG Lab Vulnerability Hunt – GitHub Hero Edition
 
-> Target: `tyleshastigtest`  
-> Scanner: Tenable / Nessus  
-> Scan Type: Credentialed  
-> Mood: Calm. Patchy. Slightly offended at Notepad.  
-> ⚡ **Pro tip:** Always check your built-in apps. They might be plotting.
+“Notepad Tried to Become a Hacker” 💻💥
 
----
+Target: Tylesha11STIGTest
+Scanner: Tenable / Nessus
+Scan Type: Credentialed
+Mood: Calm. Patchy. Slightly offended at Notepad.
+⚡ Pro tip: Always check your built-in apps. They might be plotting.
 
-# 📊 Executive Summary ☕📰
+📊 Executive Summary ☕📰
+Severity	Count
+🔴 Critical	0
+🟠 High	5
+🟡 Medium	2
+🔵 Low	2
+ℹ️ Info	124
+Total	133
 
-| Severity | Count | Badge |
-|----------|-------|-------|
-| 🔴 Critical | 0 | ![Critical](https://img.shields.io/badge/Critical-0-red) |
-| 🟠 High | 5 | ![High](https://img.shields.io/badge/High-5-orange) |
-| 🟡 Medium | 2 | ![Medium](https://img.shields.io/badge/Medium-2-yellow) |
-| 🔵 Low | 2 | ![Low](https://img.shields.io/badge/Low-2-blue) |
-| ℹ️ Info | 124 | ![Info](https://img.shields.io/badge/Info-124-lightgrey) |
-| **Total** | **133** | ![Total](https://img.shields.io/badge/Total-133-lightgrey) |
+🚨 High Severity Findings (🔥 Patch Immediately)
+Issue	Impact	Emoji
+Outlook Missing Security Updates	Potential compromise	🔥
+Notepad < 11.2510 – Command Injection	Local RCE risk 😱	💥
+Microsoft Teams – Remote Code Execution	Exploitable	⚠️
+Windows Defender Signature Issues	Antivirus may fail	🛡️
+WinVerifyTrust Signature Validation (CVE-2013-3900)	Certificate trust bypass	🧩
 
-> Quick GIF:  
-> ![Scanning in progress](https://media.giphy.com/media/3oKIPwoeGErMmaI43C/giphy.gif)
+🟡 Medium / Low Severity (👀 Watch Closely)
+SSL Self-Signed Certificate
+SSL Certificate Cannot Be Trusted
+ICMP Timestamp Disclosure
+Microsoft Teams Elevation of Privilege
 
-## 📸 Executive Summary Evidence
-![Executive Summary](screenshots/Screenshot 2026-02-17 at 1.20.00 PM.png)
+ℹ️ Informational Findings (124) 🔍
+SMB Shares
+Installed Software
+Patch Reports
+OS Info / Network Interfaces
 
----
+🧪 Lab Build – How I Created the Chaos (On Purpose 😌)
+1️⃣ Create Windows 11 VM named Tylesha11STIGTest
+- Disabled Windows Firewall
+- Opened NSG completely (all inbound allowed)
+- Tested connectivity: ping <VM Public IP>
 
-# 🚨 High Severity Findings (🔥 Patch Immediately)
+2️⃣ Intentionally misconfigured system
+- Enabled Administrator account
+- Set blank password, disabled expiration
+- Added Administrator to Administrators group
+- Enabled Guest account, added to Administrators group
+- Set no password for Guest
 
-| Issue | Impact | Emoji |
-|-------|--------|-------|
-| Outlook Missing Security Updates | Potential compromise | 🔥 |
-| Notepad < 11.2510 – Command Injection | Local RCE risk 😱 | 💥 |
-| Microsoft Teams – Remote Code Execution | Exploitable | ⚠️ |
-| Windows Defender Signature Issues | Antivirus may fail | 🛡️ |
-| WinVerifyTrust Signature Validation (CVE-2013-3900) | Certificate trust bypass | 🧩 |
+3️⃣ Configure Tenable Scan
+- Created Advanced Network Scan template
+- Basic: Start Remote Registry, Admin Shares, Server service
+- Discovery: Ping host, Fast network discovery, TCP port scan
+- Assessment: Perform thorough tests, unchecked “only use credentials”
+- Compliance: DISA Windows 11 STIG v2r5, enabled policy & plugin checks
 
-> Ninja note: “Even built-in apps tried to hack us today.” 🥷🏽
+4️⃣ Launch Scan
+- Save template, create new scan, enter target IP
+- Launch scan and observe results
 
-## 📸 High Severity Screenshot
-![High Findings](screenshots/Screenshot 2026-02-17 at 5.31.23 PM.png)
+5️⃣ Analyze Results
+- Reviewed vulnerabilities by plugin, audits, remediations, severity
+- Deleted lab environment afterward
 
----
+🛠️ Remediation Plan – Ninja Patch Mode 🥷🏽💎
+- Patch Outlook, Teams, Notepad
+- Update Defender signatures
+- Enable CertPaddingCheck mitigation
+- Replace self-signed SSL certificate
+- Re-scan and validate
 
-# 🟡 Medium / Low Severity (👀 Watch Closely)
+🧠 Final Thoughts – Cyber Zen 🧘🏽‍♀️
+- No Critical vulnerabilities detected ✅
+- Notepad attempting command injection? Personal. 😏
 
-- SSL Self-Signed Certificate  
-- SSL Certificate Cannot Be Trusted  
-- ICMP Timestamp Disclosure  
-- Microsoft Teams Elevation of Privilege  
+Security is not hype.
+It’s consistency.
+It’s patience.
+It’s ninja-level vigilance. 🥷🏽💎
 
-> Ninja mantra: Small vulnerabilities = Big problems if ignored.  
+Call to action:
+⭐ Star this repo if you’re a patching ninja!
+⚡ Share if you’ve ever been “hacked by Notepad.”
 
-## 📸 Medium / Low Screenshot
-![Medium / Low Findings](screenshots/Screenshot 2026-02-17 at 6.14.19 PM.png)
-
-> Optional GIF:  
-> ![Fixing stuff](https://media.giphy.com/media/26tOZ42Mg6pbTUPHW/giphy.gif)
-
----
-
-# ℹ️ Informational Findings (124) 🔍
-
-- SMB Shares  
-- Installed Software  
-- Patch Reports  
-- OS Info / Network Interfaces  
-
-## 📸 Informational Screenshot
-![Informational Findings](screenshots/Screenshot 2026-02-17 at 6.19.32 PM.png)
-
----
-
-# 🛠️ Remediation Plan – Ninja Patch Mode 🥷🏽
-
-- Patch Outlook, Teams, Notepad  
-- Update Defender signatures  
-- Enable CertPaddingCheck mitigation  
-- Replace self-signed SSL certificate  
-- Re-scan and validate  
-
-> GIF Motivation:  
-> ![Patch Ninja](https://media.giphy.com/media/l0MYC0LajbaPoEADu/giphy.gif)
-
----
-
-# 🧠 Final Thoughts – Cyber Zen 🧘🏽‍♀️
-
-- No Critical vulnerabilities detected ✅  
-- Notepad attempting command injection? Personal. 😏  
-
-**Security is not hype.**  
-**It’s consistency.**  
-**It’s patience.**  
-**It’s ninja-level vigilance.** 🥷🏽💎  
-
-> Call to action:  
-> ⭐ Star this repo if you’re a patching ninja!  
-> ⚡ Share if you’ve ever been “hacked by Notepad.”  
-
----
-
-> *Report generated by a slightly sarcastic ninja cybersecurity enthusiast.*  
-> Animated GIFs are placeholders — replace with your own lab captures for max effect.
+Report generated by a slightly sarcastic ninja cybersecurity enthusiast.
 EOF
 
