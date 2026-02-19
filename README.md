@@ -1,3 +1,5 @@
+cd ~/tyleshastigtest-report
+
 nano ~/Desktop/ultra-viral-README.md
 
 nano ~/Desktop/ultra-viral-README.md
