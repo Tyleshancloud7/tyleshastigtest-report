@@ -1,6 +1,4 @@
-cd ~/tyleshastigtest-report
 
-cat > README.md << 'EOF'
 🥷🏽💎 STIG Lab Vulnerability Hunt – GitHub Hero Edition
 
 “Notepad Tried to Become a Hacker” 💻💥
